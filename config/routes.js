@@ -21,7 +21,8 @@ module.exports.routes = {
 
   '/': { view: 'pages/homepage' },
   'POST /find': {action: 'query'},
-  '/details': { view: 'pages/details' }
+  'GET /details' :{action:'details'}
+
 
 
 

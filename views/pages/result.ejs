@@ -1,49 +1,77 @@
 <%if (true){ %>
-<h2>Result for <%= material.response[0].pretty_formula %></h2>
-<table class="table table-bordered">
-  <thead class="table-primary">
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Material Id</th>
-      <th scope="col">Formula</th>
-      <th scope="col">Symprec</th>
-      <th scope="col">Source</th>
-      <th scope="col">Symbol</th>
-      <th scope="col">Number</th>
-      <th scope="col">Point Group</th>
-      <th scope="col">Crystal System</th>
-      <th scope="col">Hall</th>
-      <th scope="col">Tags</th>
-      <th scope="col">Density </th>
-      <th scope="col">Action</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% material.response.forEach(function(bioData, index){ %>
-    <tr>
-      <td><%= index+1 %></td>
-      <th scope="row"><a style="text-decoration: none !important;" href="/details"> <%= bioData.material_id %></a></th>
-      <td><%= bioData.pretty_formula %></td>
-      <td><%= bioData.spacegroup.symprec %></td>
-      <td><%= bioData.spacegroup.source %></td>
-      <td><%= bioData.spacegroup.symbol %></td>
-      <td><%= bioData.spacegroup.number %></td>
-      <td><%= bioData.spacegroup.point_group %></td>
-      <td><%= bioData.spacegroup.crystal_system %></td>
-      <td><%= bioData.spacegroup.hall %></td>
-      <td><%= bioData.tags %></td>
+  <h2>Result for <%= material.response[0].pretty_formula %>
+  </h2>
+  <table class="table table-bordered">
+    <thead class="table-primary">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Material Id</th>
+        <th scope="col">Formula</th>
+        <th scope="col">Symprec</th>
+        <th scope="col">Source</th>
+        <th scope="col">Symbol</th>
+        <th scope="col">Number</th>
+        <th scope="col">Point Group</th>
+        <th scope="col">Crystal System</th>
+        <th scope="col">Hall</th>
+        <th scope="col">Tags</th>
+        <th scope="col">Density </th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% material.response.forEach(function(bioData, index){ %>
+        <tr>
+          <td>
+            <%= index+1 %>
+          </td>
+          <th scope="row"><a style="text-decoration: none !important;" href="/details">
+              <%= bioData.material_id %>
+            </a></th>
+          <td>
+            <%= bioData.pretty_formula %>
+          </td>
+          <td>
+            <%= bioData.spacegroup.symprec %>
+          </td>
+          <td>
+            <%= bioData.spacegroup.source %>
+          </td>
+          <td>
+            <%= bioData.spacegroup.symbol %>
+          </td>
+          <td>
+            <%= bioData.spacegroup.number %>
+          </td>
+          <td>
+            <%= bioData.spacegroup.point_group %>
+          </td>
+          <td>
+            <%= bioData.spacegroup.crystal_system %>
+          </td>
+          <td>
+            <%= bioData.spacegroup.hall %>
+          </td>
+          <td>
+            <%= bioData.tags %>
+          </td>
 
 
-      <td><%= bioData.density %></td>      
-      <td><a type="button" class="btn btn-primary" style="color:white !important; text-decoration: none !important;" href="/details/<%= bioData.material_id %>"> Details</a></td>
+          <td>
+            <%= bioData.density %>
+          </td>
+          <td>
+            <form action="/details" method="GET">
+              <input class="form-control me-2" type="hidden" name="data" value="<%= bioData.material_id %>">
+            <button type="submit" class="btn btn-primary" style="color:white !important; text-decoration: none !important;" > Details</a>
+          </form>
+        </td>
 
-    </tr>
-    <% }) %>
-
-    
-  </tbody>
-</table>
-
-<% } %>
+        </tr>
+        <% }) %>
 
 
+    </tbody>
+  </table>
+
+  <% } %>
