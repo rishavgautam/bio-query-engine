@@ -1,26 +1,39 @@
-# material-query-engine
+# Biomaterial Search Engine
 
-a [Sails v1](https://sailsjs.com) application
+The project aims to provide users with useful information regarding biomaterials they are looking for and sources data from a 3rd party API (Application Programming Interface) to collect and show the results. Cients using this application would be able to see results based on element name or using Material Id.
 
+## Features
 
-### Links
+- Search for biomaterials and elements
+- View results and find the test result for each element
+- Download raw JSON file
 
-+ [Sails framework documentation](https://sailsjs.com/get-started)
-+ [Version notes / upgrading](https://sailsjs.com/documentation/upgrading)
-+ [Deployment tips](https://sailsjs.com/documentation/concepts/deployment)
-+ [Community support options](https://sailsjs.com/support)
-+ [Professional / enterprise options](https://sailsjs.com/enterprise)
+## Installation
+Import the source code from repository
 
-
-### Version info
-
-This app was originally generated on Sun Sep 05 2021 17:12:19 GMT-0500 (Central Daylight Time) using Sails v1.4.4.
-
-<!-- Internally, Sails used [`sails-generate@2.0.3`](https://github.com/balderdashy/sails-generate/tree/v2.0.3/lib/core-generators/new). -->
+Install NodeJS (https://nodejs.org/en/download/)
 
 
+Open terminal and run following command to install Sails Js
+```sh
+npm install sails -g
+```
 
-<!--
-Note:  Generators are usually run using the globally-installed `sails` CLI (command-line interface).  This CLI version is _environment-specific_ rather than app-specific, thus over time, as a project's dependencies are upgraded or the project is worked on by different developers on different computers using different versions of Node.js, the Sails dependency in its package.json file may differ from the globally-installed Sails CLI release it was originally generated with.  (Be sure to always check out the relevant [upgrading guides](https://sailsjs.com/upgrading) before upgrading the version of Sails used by your app.  If you're stuck, [get help here](https://sailsjs.com/support).)
--->
+## Running the application
+
+Generate and store  API key from Materials Project for running project
+1. Go to https://www.materialsproject.org/open
+2. Look for Login to the Materials Project and generate API key text
+3. Generate API key
+4. After API key is generated, navigate to query.js and details.js file under api -> controller and paste the keys in API_Key field
+
+
+
+
+Run your sails app
+Open terminal and move to your folder where project is located and run following command
+```sh
+sails lift
+```
+
 
