@@ -19,4 +19,7 @@ module.exports.custom = {
   // stripeSecret: 'sk_test_Zzd814nldl91104qor5911gjald',
   // …
 
+  materialProjectUrl: 'https://www.materialsproject.org/rest/v2/materials/',
+  materialProjectKey: '2GE5VwTgbTpFS5cTHh'
+
 };

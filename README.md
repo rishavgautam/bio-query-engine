@@ -22,10 +22,10 @@ npm install sails -g
 ## Running the application
 
 Generate and store  API key from Materials Project for running project
-1. Go to https://www.materialsproject.org/open
+1. Navigate to https://www.materialsproject.org/open
 2. Look for Login to the Materials Project and generate API key text
-3. Generate API key
-4. After API key is generated, navigate to query.js and details.js file under api -> controller and paste the keys in API_Key field
+3. Generate the API key by registering for the project
+4. After API key is generated, navigate to custom.js file inside config folder and paste the key in materialProjectKey field.
 
 
 

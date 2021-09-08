@@ -25,9 +25,7 @@ fn: async function (inputs, exits) {
     const axios = require("axios");
     axios
     .get(
-        "https://www.materialsproject.org/rest/v2/materials/" +
-          inputs.data +
-          "/vasp?API_KEY=2GE5VwTgbTpFS5cTHh"
+      sails.config.custom.materialProjectUrl + inputs.data + "/vasp?API_KEY=" + sails.config.custom.materialProjectKey
       )
       .then((list) => {
         material = list.data

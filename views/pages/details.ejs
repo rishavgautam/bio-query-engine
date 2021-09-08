@@ -8,7 +8,7 @@
                             <div class="col-sm-12">
                                 <div class="card-block">
                                     <div class="row">
-                                        <h3 class="col-md-6 m-b-20 p-b-5 b-b-default f-w-600">
+                                        <h3 class="col-md-10 m-b-20 p-b-5 b-b-default f-w-600">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23"
                                                 fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
                                                 <path
@@ -16,9 +16,9 @@
                                                 <path
                                                     d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
                                             </svg>
-                                            Information for <%= item.pretty_formula %> with Material Id <%= item.material_id %>
+                                            Details for <%= item.pretty_formula %> with Material Id: <%= item.material_id %>
                                         </h3>
-                                        <div class="col-md-6 m-b-20 p-b-5 b-b-default f-w-600">  
+                                        <div class="col-md-2 m-b-20 p-b-5 b-b-default f-w-600">  
                                             <a class="btn btn-outline-success" style="float:right" href="/search/">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cloud-download-fill" viewBox="0 0 16 16">
                                                     <path fill-rule="evenodd" d="M8 0a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 4.095 0 5.555 0 7.318 0 9.366 1.708 11 3.781 11H7.5V5.5a.5.5 0 0 1 1 0V11h4.188C14.502 11 16 9.57 16 7.773c0-1.636-1.242-2.969-2.834-3.194C12.923 1.999 10.69 0 8 0zm-.354 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V11h-1v3.293l-2.146-2.147a.5.5 0 0 0-.708.708l3 3z"/>
@@ -33,14 +33,14 @@
                                         <div class="col-md-4">
                                             <p class="col-md-3 m-b-10 f-w-600">Material Id</p>
                                             <p class="col-md-9 text-muted f-w-400">
-                                                <%= item.pretty_formula %>
+                                                <%= item.material_id %>
                                             </p>
                                         </div>
 
                                         <div class="col-md-4">
                                             <p class="col-md-4 m-b-10 f-w-600">Formula</p>
                                             <p class="col-md-8 text-muted f-w-400">
-                                                <%= item.total_magnetization %>
+                                                <%= item.pretty_formula %>
                                             </p>
                                         </div>
 
