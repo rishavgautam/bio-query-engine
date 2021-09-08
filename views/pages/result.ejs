@@ -25,7 +25,7 @@
           <td>
             <%= index+1 %>
           </td>
-          <th scope="row"><a style="text-decoration: none !important;" href="/details">
+          <th scope="row"><a style="text-decoration: none !important;" href="/search/?data=<%= bioData.material_id %>">
               <%= bioData.material_id %>
             </a></th>
           <td>
@@ -61,11 +61,13 @@
             <%= bioData.density %>
           </td>
           <td>
-            <form action="/details" method="GET">
-              <input class="form-control me-2" type="hidden" name="data" value="<%= bioData.material_id %>">
-            <button type="submit" class="btn btn-primary" style="color:white !important; text-decoration: none !important;" > Details</a>
-          </form>
-        </td>
+            <button type="submit" class="btn btn-primary"
+              style="color:white !important; text-decoration: none !important;">
+              <a style="text-decoration: none !important; color: white!important;"
+                href="/search/?data=<%= bioData.material_id %>">
+                Details
+              </a> </a>
+          </td>
 
         </tr>
         <% }) %>
