@@ -19,7 +19,7 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-success mb-4">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success mb-4" style="background-color: #055160 !important;">
     <div class="container-fluid">
       <a class="navbar-brand" href="/">Biomaterials</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -31,14 +31,19 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="/">Home</a>
           </li>
-          
-
-         
         </ul>
+        <div class="col-md-9"></div>
+        <form class="col-md-2 form-inline my-2 my-lg-0" action="/find" method="POST">
+          <input class="form-control mr-sm-2" name="data" type="search" placeholder="Search" aria-label="Search">
+        </form>
 
       </div>
     </div>
   </nav>
+
+
+
+  
 
 
   <div class="container" style="max-width: 95% !important;">

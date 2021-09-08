@@ -1,8 +1,8 @@
 <%if (true){ %>
-  <h2>Result for <%= material.response[0].pretty_formula %>
+  <h2>Search results for <%= material.response[0].pretty_formula %>
   </h2>
   <table class="table table-bordered">
-    <thead class="table-primary">
+    <thead style="background-color: #6a8a7d; color: white;">
       <tr>
         <th scope="col">#</th>
         <th scope="col">Material Id</th>
@@ -14,7 +14,7 @@
         <th scope="col">Point Group</th>
         <th scope="col">Crystal System</th>
         <th scope="col">Hall</th>
-        <th scope="col">Tags</th>
+        <th scope="col" style="width: 25%;">Tags</th>
         <th scope="col">Density </th>
         <th scope="col">Action</th>
       </tr>
@@ -61,12 +61,10 @@
             <%= bioData.density %>
           </td>
           <td>
-            <button type="submit" class="btn btn-primary"
-              style="color:white !important; text-decoration: none !important;">
-              <a style="text-decoration: none !important; color: white!important;"
-                href="/search/?data=<%= bioData.material_id %>">
-                Details
-              </a> </a>
+            <a class="btn btn-primary" style="text-decoration: none !important; color: white!important;"
+              href="/search/?data=<%= bioData.material_id %>">
+              View
+            </a>
           </td>
 
         </tr>
