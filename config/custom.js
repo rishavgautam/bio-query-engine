@@ -20,6 +20,6 @@ module.exports.custom = {
   // …
 
   materialProjectUrl: 'https://www.materialsproject.org/rest/v2/materials/',
-  materialProjectKey: '2GE5VwTgbTpFS5cTHh'
+  materialProjectKey: '<Enter_your_api_key_here>'
 
 };
