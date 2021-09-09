@@ -48,6 +48,8 @@ npm i -g npm
 npm i --save lodash
 ```
 
+Start your application
+
 ```sh
 sails lift
 ```
