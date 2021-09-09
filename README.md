@@ -2,6 +2,8 @@
 
 The project aims to provide users with useful information regarding biomaterials they are looking for and sources data from a 3rd party API (Application Programming Interface) to collect and show the results. Cients using this application would be able to see results based on element name or using Material Id.
 
+Project Link: http://biomaterial.centralus.cloudapp.azure.com
+
 ## Features
 
 - Search for biomaterials and elements
@@ -31,7 +33,21 @@ Generate and store  API key from Materials Project to run the project
 
 
 Run your sails app
-Open terminal and move to your folder where project is located and run following command
+Open terminal and move to your folder where project is located and run following command to install necessary packages
+
+Downloading axios
+
+```sh
+npm install axios
+```
+
+Downloading and saving lodash
+
+```sh
+npm i -g npm
+npm i --save lodash
+```
+
 ```sh
 sails lift
 ```
