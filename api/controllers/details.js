@@ -29,7 +29,6 @@ fn: async function (inputs, exits) {
       )
       .then((list) => {
         material = list.data
-       // console.log(material);
         return exits.success(material)
       })
       .catch((error) => {
