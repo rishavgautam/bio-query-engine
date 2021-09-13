@@ -1,0 +1,4 @@
+FROM node:lts
+RUN npm install -g sails@1.4.4
+RUN npm install loadash --save
+RUN npm install axios
